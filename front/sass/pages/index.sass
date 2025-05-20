@@ -1,0 +1,66 @@
+$white: #FFF
+$magenta: #FF267E
+$blue: #005
+$light-grey: #E3E3E3
+
+$font-suisseIntl-SemiBold: SuisseIntl-SemiBold, sans-serif //600
+
+body
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+.wrapper
+  width: 100%
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+.banner
+  position: relative
+  width: 50%
+  background: url("../img/bg.jpg") no-repeat 0% 0%/cover
+  @media screen and (max-width: 1280px) and (min-height: 1240px)
+    background: url("../img/bg-large.jpg") no-repeat 50% 50%/cover
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  height: calc(var(--vh, 1vh) * 100)
+  overflow: hidden
+  &__logo
+    width: 370px
+    height: auto
+    margin: 0 auto
+  &__top
+    margin-bottom: 90px
+  &__title
+    &-top,
+    &-bottom
+      font-family: $font-suisseIntl-SemiBold
+      color: $light-grey
+      text-align: center
+      text-transform: uppercase
+      white-space: nowrap
+    &-top
+      font-size: 84px
+      letter-spacing: 1.668px
+      display: flex
+      align-items: center
+      margin-bottom: 28px
+      span
+        font-family: $font-suisseIntl-SemiBold
+        color: $light-grey
+        background-color: $magenta
+        font-size: 84px
+        letter-spacing: 1.668px
+        padding: 0 16px
+        margin-left: 20px
+    &-bottom
+      font-size: 41.7px
+      letter-spacing: 0.834px
+  &__roulette
+    position: absolute
+    bottom: -20px
+    width: 99vh
+
